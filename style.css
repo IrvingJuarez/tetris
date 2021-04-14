@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainColor: #12203d;
+    --borderColor: #687996;
+    --shadowColor: #23385d;
+    --insideColor: #03091f;
+    --secundaryColor: #36b3ff;
+}
+body{
+    position: relative;
+    background-color: var(--mainColor);
+}
+.first-layer{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(35, 56, 93, 0.9);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+/* .main__section{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: inherit;
+    height: auto;
+} */
+.status-section{
+    width: 288px;
+    height: 70px;
+    margin: 10px 0;
+
+    /* border-radius: 15px; */
+    background-color: var(--shadowColor);
+}
+.table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 288px;
+    height: 432px;
+    padding: 10px;
+
+    border-radius: 15px;
+    background-color: var(--shadowColor);
+    /* box-shadow: 5px 5px 9px #00003e; */
+}
+.boardGame{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 268px;
+    height: 401px;
+    background-color: var(--insideColor);
+    border: 2px solid var(--borderColor);
+}
+.boardGame section{
+    display: flex;
+}
+.boardGame section div{
+    width: 26.4px;
+    height: 26.4px;
+
+    border: 1px solid var(--shadowColor);
+}
+.startButton{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 17.5px);
+    left: calc(50% - 35px);
+    width: 70px;
+    height: 35px;
+    padding: 10px;
+    color: var(--shadowColor);
+
+    border: none;
+    border-radius: 15px;
+    background-color: var(--secundaryColor);
+}
+
+@media (min-width: 650px){
+    main{
+        flex-direction: row;
+    }
+    .status-section{
+        width: 110px;
+        height: 110px;
+        margin: 0 10px;
+    }
+    .shape-status{
+        width: 110px;
+        height: 110px;
+        margin: 0 10px;
+
+        /* border-radius: 15px; */
+        background-color: var(--shadowColor);
+    }
+    .main__section{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: inherit;
+        height: auto;
+    }
+}
