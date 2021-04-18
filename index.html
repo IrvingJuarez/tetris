@@ -6,15 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tetris game</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon preload" href="./assets/icons/tetris.svg">
 </head>
 <body>
     <div class="first-layer" id="first-layer">
-        <button onclick="getRide1stLayer()">Got it</button>
+        <div class="result" id="result">
+            <h2 id="giveResult">Here there will be the result</h2>
+            <p>Give me your feedback on my twitter or pull request on GitHub</p>
+            <div class="links">
+                <a href="https://twitter.com/juarez1_irving" class="twitter" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://github.com/IrvingJuarez/" class="github" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+            <button onclick="getRide1stLayer()">Got it</button>
+        </div>
     </div>
-    <main id="main">
-        <section class="main__section">
-            <section class="shape-status">
-
+    <main>
+        <section class="main__section"  id="main">
+            <section class="lines-status">
+                <article>
+                    Lines
+                    <div class="status">
+                        <h2 id="number-lines2">0</h2>
+                        <svg>
+                            <circle cx="20" cy="20" r="20"></circle>
+                            <circle cx="20" cy="20" r="20" id="graph-lines2"></circle>
+                        </svg>
+                    </div>
+                </article>
             </section>
             <section>
                 <article class="table">
@@ -23,8 +41,27 @@
                     </div>
                 </article>
             </section>
-            <section class="status-section">
-
+            <section class="levels-status">
+                <article>
+                    Lines
+                    <div class="status">
+                        <h2 id="number-lines">0</h2>
+                        <svg>
+                            <circle cx="20" cy="20" r="20"></circle>
+                            <circle cx="20" cy="20" r="20" id="graph-lines"></circle>
+                        </svg>
+                    </div>
+                </article>
+                <article>
+                    Level
+                    <div class="status">
+                        <h2 id="number-level">0</h2>
+                        <svg>
+                            <circle cx="20" cy="20" r="20"></circle>
+                            <circle cx="20" cy="20" r="20" id="graph-level"></circle>
+                        </svg>
+                    </div>
+                </article>
             </section>
         </section>
     </main>
